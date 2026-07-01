@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "postgres": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-postgres-server"
+      ],
+      "env": {
+        "PG_HOST": "localhost",
+        "PG_PORT": "5432",
+        "PG_USER": "madhukosuri",
+        "PG_PASSWORD": "Seneca@12345$",
+        "PG_DATABASE": "spec_kit_poc_development"
+      }
+    }
+  }
+}

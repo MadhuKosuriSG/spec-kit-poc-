@@ -60,6 +60,10 @@ group :development, :test do
   gem "faker"
 end
 
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'rails-mcp-server'
+
+
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
