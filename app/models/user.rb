@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   has_secure_password
 
+  enum :role, { user: "user", admin: "admin" }, default: :user
+
   validates :name, presence: true, length: { maximum: 255 }
   validates :email,
             presence: true,
@@ -8,6 +10,7 @@ class User < ApplicationRecord
             uniqueness: { case_sensitive: false },
             length: { maximum: 255 }
   validates :password, length: { minimum: 8 }, allow_nil: true
+  validates :role, presence: true
 
   before_validation :normalize_fields
 

@@ -18,4 +18,10 @@ Rails.application.routes.draw do
       resources :sessions, only: [ :create ]
     end
   end
+
+  namespace :admin do
+    resources :users, only: [ :index, :show ] do
+      patch :role, on: :member
+    end
+  end
 end
